@@ -1903,7 +1903,32 @@ background:
 
     transform: translateX(5px);
 }
-.card h3 {
+
+/* ALINHAMENTO DOS BOTOES EXPLORE */
+
+.motorsport-card,
+.music-card,
+.geek-card,
+.parody-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.motorsport-card .collection-cover,
+.music-card .collection-cover,
+.geek-card .collection-cover,
+.parody-card .collection-cover {
+    flex-shrink: 0;
+}
+
+.motorsport-card .collection-explore,
+.music-card .collection-explore,
+.geek-card .collection-explore,
+.parody-card .collection-explore {
+    margin-top: auto;
+}
+
+        .card h3 {
 
             font-family: 'Cormorant Garamond', serif;
 
