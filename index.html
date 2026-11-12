@@ -1912,14 +1912,75 @@ background:
     content: none !important;
     display: none !important;
 }
+
+/* =========================================
+   RALLY & OFF-ROAD — PREMIUM CARD
+   ========================================= */
+
+.rally-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.rally-card .collection-cover {
+    width: 100%;
+    height: 150px;
+    flex-shrink: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.04),
+            rgba(0,0,0,0.22)
+        ),
+        url("assets/rally-offroad.png")
+        center / cover no-repeat;
+}
+
+.rally-card .card-icon {
+    width: 64px;
+    height: 64px;
+    margin: -32px auto 14px;
+    border: 2px solid #C8A24A;
+    border-radius: 50%;
+    background: #111111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 2;
+    font-size: 26px;
+    flex-shrink: 0;
+}
+
+.rally-card h3,
+.rally-card p {
+    text-align: center;
+}
+
+.rally-card::before,
+.rally-card::after,
+.rally-card:hover::before,
+.rally-card:hover::after {
+    content: none !important;
+    display: none !important;
+}
 /* VINTAGE MOTORSPORT — BOTAO EXPLORE */
+
 
 
 .motorsport-card .collection-explore,
 .music-card .collection-explore,
 .geek-card .collection-explore,
 .parody-card .collection-explore,
-.cat-card .collection-explore {
+.cat-card .collection-explore,
+.rally-card .collection-explore {
+
 
     display: flex;
     align-items: center;
@@ -1951,7 +2012,9 @@ background:
 .music-card .collection-explore span,
 .geek-card .collection-explore span,
 .parody-card .collection-explore span,
-.cat-card .collection-explore span {
+
+.cat-card .collection-explore span,
+.rally-card .collection-explore span {
 
 
     color: #C8A24A;
@@ -1966,7 +2029,10 @@ background:
 .music-card .collection-explore:hover,
 .geek-card .collection-explore:hover,
 .parody-card .collection-explore:hover,
-.cat-card .collection-explore:hover {
+
+.cat-card .collection-explore:hover,
+.rally-card .collection-explore:hover {
+
 
 
     color: #C8A24A;
@@ -1978,7 +2044,9 @@ background:
 .music-card .collection-explore:hover span,
 .geek-card .collection-explore:hover span,
 .parody-card .collection-explore:hover span,
-.cat-card .collection-explore:hover span {
+.cat-card .collection-explore:hover span,
+.rally-card .collection-explore:hover span {
+
 
 
     transform: translateX(5px);
@@ -1991,7 +2059,9 @@ background:
 .music-card,
 .geek-card,
 .parody-card,
-.cat-card {
+.cat-card,
+.rally-card {
+
     display: flex;
     flex-direction: column;
 }
@@ -2002,7 +2072,9 @@ background:
 .music-card .collection-cover,
 .geek-card .collection-cover,
 .parody-card .collection-cover,
-.cat-card .collection-cover {
+.cat-card .collection-cover,
+.rally-card .collection-cover {
+
     flex-shrink: 0;
 }
 
@@ -2012,7 +2084,9 @@ background:
 .music-card .collection-explore,
 .geek-card .collection-explore,
 .parody-card .collection-explore,
-.cat-card .collection-explore {
+.cat-card .collection-explore,
+.rally-card .collection-explore {
+
     margin-top: auto;
 }
 
