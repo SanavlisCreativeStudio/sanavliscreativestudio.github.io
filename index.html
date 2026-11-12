@@ -851,6 +851,75 @@
     transform: scale(1);
 }
 
+/* ========================================
+   ART PRINTS & POSTERS — GALLERY BACKGROUND
+======================================== */
+
+.collections-poster-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(1.04);
+    transition: opacity 0.9s ease, transform 1.1s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Tres posters decorativos */
+
+.collections-poster-bg span {
+    position: absolute;
+    width: 200px;
+    height: 285px;
+    border: 2px solid rgba(200,162,74,0.42);
+    background:
+        radial-gradient(
+            circle at 50% 33%,
+            rgba(200,162,74,0.16) 0 48px,
+            transparent 49px
+        ),
+        linear-gradient(
+            145deg,
+            rgba(200,162,74,0.08),
+            transparent 65%
+        );
+    box-shadow: inset 0 0 0 10px rgba(200,162,74,0.035);
+}
+
+/* Poster esquerdo */
+
+.collections-poster-bg span:nth-child(1) {
+    left: 5%;
+    top: 15%;
+    transform: rotate(-13deg);
+}
+
+/* Poster superior direito */
+
+.collections-poster-bg span:nth-child(2) {
+    right: 6%;
+    top: 8%;
+    transform: rotate(12deg);
+}
+
+/* Poster inferior direito */
+
+.collections-poster-bg span:nth-child(3) {
+    right: 17%;
+    bottom: -90px;
+    transform: rotate(-9deg);
+    width: 165px;
+    height: 235px;
+}
+
+/* Ativar ao passar o mouse no card */
+
+#collections:has(.poster-card:hover) .collections-poster-bg {
+    opacity: 0.32;
+    transform: scale(1);
+}
+
         .grid {
 
             display: grid;
@@ -2273,6 +2342,14 @@ background:
 <div class="collections-cat-bg" aria-hidden="true"></div>
 
 <div class="collections-japan-bg" aria-hidden="true"></div>
+
+
+<div class="collections-poster-bg" aria-hidden="true">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
 
     <h2 class="section-title">
 
