@@ -2044,6 +2044,70 @@ background:
     position: relative;
     z-index: 10;
 }
+
+/* =========================================
+   ART PRINTS & POSTERS — PREMIUM CARD
+   ========================================= */
+
+.poster-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+}
+
+.poster-card .collection-cover {
+    display: block;
+    width: 100%;
+    height: 150px;
+    flex-shrink: 0;
+    border-radius: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.04),
+            rgba(0,0,0,0.22)
+        ),
+        url("assets/art-prints-posters.png")
+        center / cover no-repeat;
+}
+
+.poster-card .poster-stack {
+    display: none !important;
+}
+
+.poster-card .card-icon {
+    width: 64px;
+    height: 64px;
+    margin: -32px auto 14px;
+    border: 2px solid #C8A24A;
+    border-radius: 50%;
+    background: #111111;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+.poster-card h3,
+.poster-card p {
+    text-align: center;
+}
+
+.poster-card::before,
+.poster-card::after,
+.poster-card:hover::before,
+.poster-card:hover::after {
+    content: none !important;
+    display: none !important;
+}
 /* VINTAGE MOTORSPORT — BOTAO EXPLORE */
 
 
@@ -2054,7 +2118,9 @@ background:
 .parody-card .collection-explore,
 .cat-card .collection-explore,
 .rally-card .collection-explore,
-.japan-card .collection-explore {
+.japan-card .collection-explore,
+.poster-card .collection-explore {
+
 
 
 
@@ -2091,7 +2157,9 @@ background:
 
 .cat-card .collection-explore span,
 .rally-card .collection-explore span,
-.japan-card .collection-explore span {
+.japan-card .collection-explore span,
+.poster-card .collection-explore span {
+
 
 
 
@@ -2111,7 +2179,9 @@ background:
 .cat-card .collection-explore:hover,
 
 .rally-card .collection-explore:hover,
-.japan-card .collection-explore:hover {
+.japan-card .collection-explore:hover,
+.poster-card .collection-explore:hover {
+
 
 
 
@@ -2127,7 +2197,9 @@ background:
 .parody-card .collection-explore:hover span,
 .cat-card .collection-explore:hover span,
 .rally-card .collection-explore:hover span,
-.japan-card .collection-explore:hover span {
+.japan-card .collection-explore:hover span,
+.poster-card .collection-explore:hover span {
+
 
 
 
@@ -2144,7 +2216,9 @@ background:
 .parody-card,
 .cat-card,
 .rally-card,
-.japan-card {
+.japan-card,
+.poster-card {
+
 
 
     display: flex;
@@ -2159,7 +2233,9 @@ background:
 .parody-card .collection-cover,
 .cat-card .collection-cover,
 .rally-card .collection-cover,
-.japan-card .collection-cover {
+.japan-card .collection-cover,
+.poster-card .collection-cover {
+
 
 
     flex-shrink: 0;
@@ -2173,7 +2249,9 @@ background:
 .parody-card .collection-explore,
 .cat-card .collection-explore,
 .rally-card .collection-explore,
-.japan-card .collection-explore {
+.japan-card .collection-explore,
+.poster-card .collection-explore {
+
 
 
     margin-top: auto;
@@ -3212,6 +3290,8 @@ background-size: contain;
 
 <div class="card poster-card">
 
+<div class="collection-cover poster-cover"></div>
+
 <div class="poster-stack" aria-hidden="true"></div>
 
     
@@ -3237,6 +3317,12 @@ background-size: contain;
         interiors and collectors who want
         something beyond the ordinary.
     </p>
+
+<a href="#art-prints-posters"
+   class="collection-explore"
+   aria-label="Explore Art Prints & Posters">
+    EXPLORE <span aria-hidden="true">→</span>
+</a>
 
 </div>
 
