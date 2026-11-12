@@ -1234,14 +1234,23 @@
     position: relative;
     z-index: 3;
 }
-/* CAT ART - PROTECAO SUAVE DO TEXTO */
+/* CAT ART — PROTECAO DEFINITIVA DO TEXTO */
 
 .cat-card h3,
 .cat-card p {
-    text-shadow:
-        0 1px 5px rgba(0, 0, 0, 0.95),
-        0 0 12px rgba(0, 0, 0, 0.85);
+    position: relative;
+    z-index: 3;
+
+    background: linear-gradient(
+        90deg,
+        rgba(17,17,17,0.97) 0%,
+        rgba(17,17,17,0.88) 65%,
+        rgba(17,17,17,0) 100%
+    );
+
+    text-shadow: 0 1px 4px rgba(0,0,0,0.9);
 }
+
         .card h3 {
 
             font-family: 'Cormorant Garamond', serif;
