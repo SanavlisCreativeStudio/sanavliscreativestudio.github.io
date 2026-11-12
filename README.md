@@ -1,2 +1,2 @@
-# sanavlisstudioscompany.github.io
-Official website of Sanavlis Studios Company
+# sanavliscreativestudio.github.io
+Official website of Sanavlis Creative Studio
