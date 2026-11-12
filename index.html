@@ -1266,11 +1266,19 @@
     position: absolute;
     inset: 0;
 
-    background:
+    
+background:
     radial-gradient(
         circle at 75% 30%,
-        rgba(165, 30, 45, 0.28) 0 42px,
+        #491C25 0 42px,
         transparent 42px
+    ),
+    repeating-conic-gradient(
+        from 0deg at 75% 30%,
+        rgba(165, 30, 45, 0.09) 0deg 12deg,
+        transparent 12deg 30deg
+    );
+
     ),
     repeating-conic-gradient(
         from 0deg at 75% 30%,
