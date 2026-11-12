@@ -1690,10 +1690,84 @@ background:
     content: none !important;
     display: none !important;
 }
+
+/* ====================================
+   GEEK & NERD ART — NOVO LAYOUT
+==================================== */
+
+.geek-card {
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Capa panoramica */
+
+.geek-card .collection-cover {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 150px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.04),
+            rgba(0,0,0,0.22)
+        ),
+        url("assets/geek-nerd-art.png")
+        center / cover no-repeat;
+
+    border-bottom: 1px solid rgba(200,162,74,0.30);
+}
+
+/* Icone circular dourado */
+
+.geek-card .card-icon {
+    position: relative;
+    z-index: 4;
+    width: 64px;
+    height: 64px;
+    margin: -32px auto 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #111111;
+    border: 2px solid #C8A24A;
+    border-radius: 50%;
+
+    font-size: 25px;
+    box-shadow: 0 0 0 4px rgba(17,17,17,0.9);
+}
+
+/* Titulo e descricao */
+
+.geek-card h3 {
+    padding: 0 18px;
+    margin-bottom: 12px;
+}
+
+.geek-card p {
+    padding: 0 20px 22px;
+    margin: 0;
+}
+
+/* Desativar efeitos internos antigos */
+
+.geek-card::before,
+.geek-card::after,
+.geek-card:hover::before,
+.geek-card:hover::after {
+    content: none !important;
+    display: none !important;
+}
 /* VINTAGE MOTORSPORT — BOTAO EXPLORE */
 
 .motorsport-card .collection-explore,
-.music-card .collection-explore {
+.music-card .collection-explore,
+.geek-card .collection-explore {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1720,7 +1794,8 @@ background:
 
 
 .motorsport-card .collection-explore span,
-.music-card .collection-explore span {
+.music-card .collection-explore span,
+.geek-card .collection-explore span {
 
     color: #C8A24A;
     font-size: 20px;
@@ -1730,14 +1805,16 @@ background:
 
 
 .motorsport-card .collection-explore:hover,
-.music-card .collection-explore:hover {
+.music-card .collection-explore:hover,
+.geek-card .collection-explore:hover {
 
     color: #C8A24A;
 }
 
 
 .motorsport-card .collection-explore:hover span,
-.music-card .collection-explore:hover span {
+.music-card .collection-explore:hover span,
+.geek-card .collection-explore:hover span {
 
     transform: translateX(5px);
 }
@@ -2625,6 +2702,8 @@ background:
 
         <div class="card geek-card">
 
+<div class="collection-cover geek-cover"></div>
+
             <div class="card-icon">🤓</div>
 
             <h3>
@@ -2638,6 +2717,12 @@ background:
                 science fiction and geek culture.
 
             </p>
+
+<a href="#geek-nerd-art"
+   class="collection-explore"
+   aria-label="Explore Geek & Nerd Art">
+    EXPLORE <span aria-hidden="true">→</span>
+</a>
 
         </div>
 
