@@ -1350,7 +1350,37 @@ background:
     z-index: 3;
 }
 
-       .poster-card:hover::after {
+       
+/* ART PRINTS & POSTERS — GHOST GALLERY */
+
+.poster-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.poster-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(#111111, #111111)
+            right 22px top 38px / 66px 94px no-repeat,
+        linear-gradient(rgba(200,162,74,0.55), rgba(200,162,74,0.55))
+            right 20px top 36px / 70px 98px no-repeat,
+        linear-gradient(#111111, #111111)
+            left 18px bottom 24px / 54px 74px no-repeat,
+        linear-gradient(rgba(200,162,74,0.40), rgba(200,162,74,0.40))
+            left 16px bottom 22px / 58px 78px no-repeat;
+
+    opacity: 0;
+    transform: scale(1.08);
+    transition: opacity 0.8s ease, transform 1s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+        .poster-card:hover::after {
     opacity: 1;
     transform: scale(1);
 }
