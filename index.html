@@ -779,6 +779,35 @@
         translateX(0)
         scale(1);
 }   
+       /* CAT ART — PATINHAS NO FUNDO DO SITE */
+
+.collections-cat-bg {
+    position: absolute;
+    inset: 0;
+
+    background-image: url("assets/cat-paws.svg");
+    background-repeat: repeat;
+    background-size: 520px 520px;
+    background-position: center;
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 1.1s ease;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ATIVAR AO PASSAR O MOUSE NO CAT ART */
+
+#collections:has(.cat-card:hover) .collections-cat-bg {
+    opacity: 0.16;
+    transform: translateY(0);
+}
         .grid {
 
             display: grid;
@@ -2008,6 +2037,9 @@
     <div class="collections-music-bg" aria-hidden="true"></div>
     <div class="collections-geek-bg" aria-hidden="true"></div>
     <div class="collections-parody-bg" aria-hidden="true"></div>
+    
+<div class="collections-cat-bg" aria-hidden="true"></div>
+
     <h2 class="section-title">
 
         Featured Collections
