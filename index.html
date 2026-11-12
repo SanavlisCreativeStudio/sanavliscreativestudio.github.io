@@ -1617,9 +1617,83 @@ background:
     margin: 0;
 }
 
+
+/* ====================================
+   MUSIC & PROGRESSIVE ROCK — NOVO LAYOUT
+==================================== */
+
+.music-card {
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Capa panoramica */
+
+.music-card .collection-cover {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 150px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.04),
+            rgba(0,0,0,0.22)
+        ),
+        url("assets/music-progressive-rock.png")
+        center / cover no-repeat;
+
+    border-bottom: 1px solid rgba(200,162,74,0.30);
+}
+
+/* Icone circular dourado */
+
+.music-card .card-icon {
+    position: relative;
+    z-index: 4;
+    width: 64px;
+    height: 64px;
+    margin: -32px auto 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #111111;
+    border: 2px solid #C8A24A;
+    border-radius: 50%;
+
+    font-size: 25px;
+    box-shadow: 0 0 0 4px rgba(17,17,17,0.9);
+}
+
+/* Titulo e descricao */
+
+.music-card h3 {
+    padding: 0 18px;
+    margin-bottom: 12px;
+}
+
+.music-card p {
+    padding: 0 20px 22px;
+    margin: 0;
+}
+
+/* Desativar somente os efeitos internos antigos */
+
+.music-card::before,
+.music-card::after,
+.music-card:hover::before,
+.music-card:hover::after {
+    content: none !important;
+    display: none !important;
+}
 /* VINTAGE MOTORSPORT — BOTAO EXPLORE */
 
-.motorsport-card .collection-explore {
+.motorsport-card .collection-explore,
+.music-card .collection-explore {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1644,18 +1718,27 @@ background:
     transition: color 0.3s ease;
 }
 
-.motorsport-card .collection-explore span {
+
+.motorsport-card .collection-explore span,
+.music-card .collection-explore span {
+
     color: #C8A24A;
     font-size: 20px;
     letter-spacing: 0;
     transition: transform 0.3s ease;
 }
 
-.motorsport-card .collection-explore:hover {
+
+.motorsport-card .collection-explore:hover,
+.music-card .collection-explore:hover {
+
     color: #C8A24A;
 }
 
-.motorsport-card .collection-explore:hover span {
+
+.motorsport-card .collection-explore:hover span,
+.music-card .collection-explore:hover span {
+
     transform: translateX(5px);
 }
 .card h3 {
@@ -2515,6 +2598,8 @@ background:
 
         <div class="card music-card">
 
+<div class="collection-cover music-cover"></div>
+
             <div class="card-icon">🎸</div>
 
             <h3>
@@ -2528,6 +2613,12 @@ background:
                 and the visual culture of music.
 
             </p>
+
+<a href="#music-progressive-rock"
+   class="collection-explore"
+   aria-label="Explore Music & Progressive Rock">
+    EXPLORE <span aria-hidden="true">→</span>
+</a>
 
         </div>
 
