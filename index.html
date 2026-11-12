@@ -2665,7 +2665,33 @@ background:
 
         }
 
+    /* =========================================
+   RALLY & OFF-ROAD — TRILHAS NO FUNDO
+   ========================================= */
+
+#collections .collections-rally-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background-image: url("assets/rally-tracks.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: min(1100px, 95%) auto;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.6s ease;
+}
+
+#collections:has(.rally-card:hover)
+.collections-rally-bg {
+    opacity: 1;
+}
     </style>
+
+
 
 </head>
 
@@ -2823,6 +2849,8 @@ background:
     <span></span>
     <span></span>
 </div>
+
+<div class="collections-rally-bg" aria-hidden="true"></div>
 
 
     <h2 class="section-title">
