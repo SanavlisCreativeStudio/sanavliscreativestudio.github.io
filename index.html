@@ -2674,38 +2674,42 @@ background:
     inset: 0;
     z-index: 0;
 
-    
 background-image:
+    url("assets/rally-tracks.svg"),
+    url("assets/rally-tracks.svg"),
     url("assets/rally-tracks.svg"),
     url("assets/rally-tracks.svg"),
     url("assets/rally-tracks.svg"),
     url("assets/rally-tracks.svg"),
     url("assets/rally-tracks.svg");
 
-    background-repeat: no-repeat;
-    
+background-repeat: no-repeat;
 
 background-position:
     left 0px top 0px,
+    center top 0px,
     right 0px top 0px,
-    center center,
+    left 0px center,
+    right 0px center,
     left 0px bottom 0px,
     right 0px bottom 0px;
 
 background-size:
-    800px auto,
-    800px auto,
+    680px auto,
     650px auto,
-    800px auto,
-    800px auto;
-
-
+    680px auto,
+    700px auto,
+    700px auto,
+    680px auto,
+    680px auto;
 
     opacity: 0;
     pointer-events: none;
-
     transition: opacity 0.6s ease;
 }
+
+    
+
 
 #collections:has(.rally-card:hover)
 .collections-rally-bg {
