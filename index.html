@@ -155,6 +155,49 @@
 
         }
 
+/* SANAVLIS - STORE LINKS */
+
+.store-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.store-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 34px;
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.store-links a:hover {
+    transform: translateY(-2px);
+    opacity: 0.8;
+}
+
+.store-links img {
+    display: block;
+    max-width: 96px;
+    max-height: 24px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 900px) {
+    .store-links {
+        gap: 9px;
+    }
+
+    .store-links img {
+        max-width: 64px;
+        max-height: 18px;
+    }
+}
+
 
         /* EXPLORE ART BUTTON */
 
@@ -3024,43 +3067,47 @@ background-size: contain;
 
     <div class="nav-right">
 
-        <div class="social-links">
+     
+<div class="store-links">
 
-            <a href="#"
-               aria-label="Instagram"
-               title="Instagram">
+  <a href="https://www.redbubble.com/people/MotorsportLife/explore"
+     target="_blank"
+     rel="noopener noreferrer"
+     title="Redbubble"
+     aria-label="Shop on Redbubble"
+     style="gap:5px; color:#f5f5f5; font-size:12px;
+            font-weight:600; white-space:nowrap;">
+    <span style="color:#d4af63; font-weight:800;">RB</span>
+    Redbubble
+  </a>
 
-                <i class="bi bi-instagram"></i>
+  <a href="https://www.teepublic.com/user/sanavlis-creative-studios"
+     target="_blank"
+     rel="noopener noreferrer"
+     title="TeePublic"
+     aria-label="Shop on TeePublic"
+     style="gap:5px; color:#f5f5f5; font-size:12px;
+            font-weight:600; white-space:nowrap;">
+    <span style="color:#d4af63; font-weight:800;">TP</span>
+    TeePublic
+  </a>
 
-            </a>
+  <a href="https://displate.com/artist/sanavlisstudioscompany"
+     target="_blank"
+     rel="noopener noreferrer"
+     title="Displate"
+     aria-label="Shop on Displate"
+     style="gap:5px; color:#f5f5f5; font-size:12px;
+            font-weight:600; white-space:nowrap;">
+    <span style="color:#d4af63; font-weight:800;">D</span>
+    Displate
+  </a>
 
-            <a href="#"
-               aria-label="Pinterest"
-               title="Pinterest">
-
-                <i class="bi bi-pinterest"></i>
-
-            </a>
-
-            <a href="#"
-               aria-label="YouTube"
-               title="YouTube">
-
-                <i class="bi bi-youtube"></i>
-
-            </a>
-
-        </div>
+</div>
 
 
-        <a href="#collections"
-           class="explore-top">
 
-            Explore Art
-
-            <span>→</span>
-
-        </a>
+       
 
     </div>
 
